@@ -36,7 +36,7 @@ struct RecipeDetailView: View {
                     }
                 }.listRowBackground(listBackgroundColor)
                 Section(header: Text("Directions")) {
-                    ForEach(recipe.ingredients.indices, id: \.self) { index in
+                    ForEach(recipe.directions.indices, id: \.self) { index in
                         let direction = recipe.directions[index]
                         HStack {
                             Text("\(index + 1). ").bold()

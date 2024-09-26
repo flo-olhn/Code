@@ -77,16 +77,6 @@ struct Direction {
     var isOptional: Bool
 }
 
-
-
-
-
-
-
-
-
-
-
 // Recipes
 extension Recipe {
   static let testRecipes: [Recipe] = [
@@ -383,12 +373,12 @@ extension Recipe {
            ingredients: [
             Ingredient(name: "Granola", quantity: 0.5, unit: .cups),
             Ingredient(name: "Banana", quantity: 1, unit: .none),
-            Ingredient(name: "Peanut Butter", quantity: 2, unit: .tbs),
+            Ingredient(name: "Peanut Butter", quantity: 2, unit: .tbs)
            ],
            directions:  [
             Direction(description: "Slice the banana", isOptional: false),
             Direction(description: "Combine all ingredients in a bowl", isOptional: false),
-            Direction(description: "Add chocolate chips", isOptional: true),
+            Direction(description: "Add chocolate chips", isOptional: true)
            ]
     ),
     Recipe(mainInformation: MainInformation(name: "Banana Bread",
