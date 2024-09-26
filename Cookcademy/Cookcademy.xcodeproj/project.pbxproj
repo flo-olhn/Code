@@ -10,6 +10,8 @@
 		1736B8012CA586A80011F28C /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736B8002CA586A80011F28C /* RecipesListView.swift */; };
 		1736B8132CA59C0F0011F28C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736B8112CA59C0F0011F28C /* Recipe.swift */; };
 		1736B8182CA59E2C0011F28C /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736B8172CA59E2C0011F28C /* RecipeData.swift */; };
+		1736B81A2CA5A2B50011F28C /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736B8192CA5A2B50011F28C /* RecipeDetailView.swift */; };
+		1736B81C2CA5A6300011F28C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1736B81B2CA5A6300011F28C /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		1736B8002CA586A80011F28C /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		1736B8112CA59C0F0011F28C /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		1736B8172CA59E2C0011F28C /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		1736B8192CA5A2B50011F28C /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		1736B81B2CA5A6300011F28C /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				1736B8002CA586A80011F28C /* RecipesListView.swift */,
+				1736B8192CA5A2B50011F28C /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1736B8172CA59E2C0011F28C /* RecipeData.swift */,
+				1736B81B2CA5A6300011F28C /* AppColor.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1736B8132CA59C0F0011F28C /* Recipe.swift in Sources */,
+				1736B81A2CA5A2B50011F28C /* RecipeDetailView.swift in Sources */,
 				1736B8182CA59E2C0011F28C /* RecipeData.swift in Sources */,
 				1736B8012CA586A80011F28C /* RecipesListView.swift in Sources */,
+				1736B81C2CA5A6300011F28C /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
