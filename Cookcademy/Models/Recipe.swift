@@ -410,6 +410,6 @@ extension Recipe {
             Direction(description: "Stir in chocolate chips", isOptional: false),
             Direction(description: "Pour in buttered loaf and bake 1 hour or until knife inserted comes out clean", isOptional: false)
            ]
-    )
+    ),
   ]
 }
