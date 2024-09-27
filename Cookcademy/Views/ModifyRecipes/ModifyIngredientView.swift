@@ -7,13 +7,17 @@
 
 import SwiftUI
 
-struct ModifyIngredientView: View {
+struct ModifyIngredientView: ModifyComponentView {
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
     
+    init(component: Binding<Ingredient>, createAction: @escaping (Ingredient) -> Void) {
+        self._ingredient = component
+        self.createAction = createAction
+    }
     
     @Binding var ingredient: Ingredient
-    let createAction: ((Ingredient) -> Void)
+    let createAction: ((Component) -> Void)
     
     @Environment(\.dismiss) private var mode
     
@@ -35,7 +39,7 @@ struct ModifyIngredientView: View {
                     Spacer()
                     // Text(ingredient.unit.rawValue)
                 }) {
-                    ForEach(Ingredient.Unit.allCases, id: \.self) { unit in
+                    ForEach(Component.Unit.allCases, id: \.self) { unit in
                         Text(unit.rawValue)
                     }
                 }.listRowBackground(listBackgroundColor)
@@ -64,7 +68,9 @@ extension NumberFormatter {
 
 #Preview {
     @Previewable @State var ingredient = Ingredient()
-    ModifyIngredientView(ingredient: $ingredient) { ingredient in
-        print(ingredient)
-    }
+    NavigationView {
+        ModifyIngredientView(component: $ingredient) { ingredient in
+            print(ingredient)
+        }
+    }.navigationTitle("Add Ingredient")
 }
