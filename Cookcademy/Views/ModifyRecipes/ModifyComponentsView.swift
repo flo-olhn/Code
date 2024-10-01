@@ -51,15 +51,26 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
                         .font(.title)
                         .padding()
                     Spacer()
+                    EditButton()
+                        .padding()
                 }
                 List {
                     ForEach(components.indices, id: \.self) { index in
                         let component = components[index]
-                        Text(component.description)
-                    }.listRowBackground(listBackgroundColor)
-                    NavigationLink("Add another \(Component.singularName())", destination: addComponentView)
-                        .buttonStyle(PlainButtonStyle())
-                        .listRowBackground(listBackgroundColor)
+                        // Text(component.description)
+                        let editComponentView = DestinationView(component: $components[index]) { _ in
+                            return
+                        }
+                        .navigationTitle("Edit" + "\(Component.singularName().capitalized)")
+                        //.listRowBackground(listBackgroundColor)
+                        NavigationLink(component.description, destination: editComponentView)
+                            .buttonStyle(PlainButtonStyle())
+                            .listRowBackground(listBackgroundColor)
+                    }
+                    .onDelete { components.remove(atOffsets: $0) }
+                    .onMove { indices, newOffset in
+                        components.move(fromOffsets: indices, toOffset: newOffset)
+                    }
                 }.foregroundStyle(listTextColor)
             }
         }
